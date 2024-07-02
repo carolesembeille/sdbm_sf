@@ -1,9 +1,25 @@
+
+
+
+
 {% extends 'base.html.twig' %}
 
-{% block title %}Continent index{% endblock %}
+{% block title %}{% trans %}Continent index{% endtrans %}{% endblock %}
 
 {% block body %}
-    <h1>Continent index</h1>
+
+<style>
+    /* .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; } */
+    /* .example-wrapper code { background: #F5F5F5; padding: 2px 6px; } */
+    .example-wrapper {text-align:center;}
+</style>
+
+<div class="example-wrapper">
+    <h1 class="mt-5 mb-3">{% trans %}Liste des continents{% endtrans %}</h1>
+
+     <a class="btn btn-success bi bi-plus mt-3 mb-3" href="{{ path('app_continent_new') }}">Ajouter</a> 
+
+  </div>
 
     <table class="table">
         <thead>
@@ -19,8 +35,8 @@
                 <td>{{ continent.id }}</td>
                 <td>{{ continent.nom }}</td>
                 <td>
-                    <a href="{{ path('app_continent_show', {'id': continent.id}) }}">show</a>
-                    <a href="{{ path('app_continent_edit', {'id': continent.id}) }}">edit</a>
+                    <a class="btn btn-info bi bi-eye" href="{{ path('app_continent_show', {'id': continent.id}) }}">Voir</a>
+                    <a class="btn btn-secondary bi bi-pencil" href="{{ path('app_continent_edit', {'id': continent.id}) }}">Modifier</a>
                 </td>
             </tr>
         {% else %}
@@ -31,5 +47,5 @@
         </tbody>
     </table>
 
-    <a href="{{ path('app_continent_new') }}">Create new</a>
+  
 {% endblock %}

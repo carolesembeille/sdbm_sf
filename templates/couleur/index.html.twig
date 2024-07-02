@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Couleur index{% endblock %}
+
+{% block body %}
+
+<style>
+    .example-wrapper {text-align:center;}
+</style>
+
+<div class="example-wrapper">
+   <h1 class="mt-3 mb-3" >Liste des couleurs </h1>
+
+    <a class="btn btn-success mt-3 mb-3 bi bi-plus" href="{{ path('app_couleur_new') }}">Ajouter</a>
+
+  </div>
+    
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>NomCouleur</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for couleur in couleurs %}
+            <tr>
+                <td>{{ couleur.id }}</td>
+                <td>{{ couleur.nomCouleur }}</td>
+                <td>
+                    <a class="btn btn-info bi bi-eye" href="{{ path('app_couleur_show', {'id': couleur.id}) }}">voir</a>
+                    <a class="btn btn-secondary bi bi-pencil" href="{{ path('app_couleur_edit', {'id': couleur.id}) }}">modifier</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="3">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    
+{% endblock %}

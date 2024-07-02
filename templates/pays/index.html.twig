@@ -3,7 +3,20 @@
 {% block title %}Pays index{% endblock %}
 
 {% block body %}
-    <h1>Pays index</h1>
+
+<style>
+    .example-wrapper {text-align:center;}
+</style>
+
+<div class="example-wrapper">
+   
+
+  <h1 class="mt-3 mb-3">Liste des pays</h1>
+    
+
+     <a class="btn btn-success bi bi-plus mt-3 mb-3" href="{{ path('app_pays_new') }}">ajouter</a>
+  </div>
+  
 
     <table class="table">
         <thead>
@@ -21,8 +34,8 @@
                 <td>{{ pay.nomPays }}</td>
                  <td>{{ pay.continents.nom }}</td>
                 <td>
-                    <a href="{{ path('app_pays_show', {'id': pay.id}) }}">show</a>
-                    <a href="{{ path('app_pays_edit', {'id': pay.id}) }}">edit</a>
+                    <a class="btn btn-info btn-block bi bi-eye" href="{{ path('app_pays_show', {'id': pay.id}) }}">voir</a>
+                    <a class="btn btn-secondary bi bi-pencil" href="{{ path('app_pays_edit', {'id': pay.id}) }}">modifier</a>
                 </td>
             </tr>
         {% else %}
@@ -33,5 +46,5 @@
         </tbody>
     </table>
 
-    <a href="{{ path('app_pays_new') }}">Create new</a>
+   
 {% endblock %}
