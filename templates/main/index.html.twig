@@ -1,18 +1,27 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello MainController!{% endblock %}
+{% block title %}SDBM!{% endblock %}
 
 {% block body %}
 <style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    /* .example-wrapper code { background: #F5F5F5; padding: 2px 6px; } */
-    .example-wrapper { font-size: 250px; text-align:center;}
+    .example-wrapper { 
+    display:flex; 
+    align-items: center; 
+    justify-content: center;
+    margin: 1em auto; 
+    max-width: 800px; 
+    width: 95%; 
+    font: 18px/1.5 sans-serif; 
+    width: 100vw; 
+    height: 100vh;}
+   
+    .titre { font-size: 150px !important;text-align:center;}
 </style>
 
 <div class="example-wrapper">
     {# <h1>Hello {{ controller_name }}! ✅</h1> #}
 
-    <h1> Bienvenue sur notre site </h1>
+    <h1 class="titre"> Bienvenue sur notre site </h1>
 
     {# This friendly message is coming from:
     <ul>
