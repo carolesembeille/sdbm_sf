@@ -13,40 +13,59 @@ class Marque
     #[ORM\Column]
     private ?int $id = null;
 
-    #[ORM\ManyToOne(inversedBy: 'marques')]
-    #[ORM\JoinColumn(nullable: false)]
-    private ?Pays $nomMarque = null;
+    #[ORM\Column(length: 40)]
+    private ?string $nomMarque = null;
 
     #[ORM\ManyToOne(inversedBy: 'marques')]
-    #[ORM\JoinColumn(nullable: false)]
-    private ?Fabricant $Fabricant = null;
+    private ?Pays $pays = null;
+
+    #[ORM\ManyToOne(inversedBy: 'marques')]
+    private ?Fabricant $fabricants = null;
 
     public function getId(): ?int
     {
         return $this->id;
     }
 
-    public function getNomMarque(): ?Pays
+    public function getNomMarque(): ?string
     {
         return $this->nomMarque;
     }
 
-    public function setNomMarque(?Pays $nomMarque): static
+    public function setNomMarque(string $nomMarque): static
     {
         $this->nomMarque = $nomMarque;
 
         return $this;
     }
 
-    public function getFabricant(): ?Fabricant
+    public function getPays(): ?Pays
     {
-        return $this->Fabricant;
+        return $this->pays;
     }
 
-    public function setFabricant(?Fabricant $Fabricant): static
+    public function setPays(?Pays $pays): static
     {
-        $this->Fabricant = $Fabricant;
+        $this->pays = $pays;
 
         return $this;
+    }
+
+    public function getFabricants(): ?Fabricant
+    {
+        return $this->fabricants;
+    }
+
+    public function setFabricants(?Fabricant $fabricants): static
+    {
+        $this->fabricants = $fabricants;
+
+        return $this;
+    }
+
+    public function __toString()
+    {
+
+        return $this->nom;
     }
 }

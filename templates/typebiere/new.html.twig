@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Typebiere
+{% endblock %}
+
+{% block body %}
+	<h1>Ajouter un Type de biere</h1>
+
+	{{ include('typebiere/_form.html.twig') }}
+
+	<a class="btn btn-secondary" href="{{ path('app_typebiere_index') }}">retour</a>
+{% endblock %}

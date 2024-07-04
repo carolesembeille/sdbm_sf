@@ -21,13 +21,14 @@ class Fabricant
     /**
      * @var Collection<int, Marque>
      */
-    #[ORM\OneToMany(targetEntity: Marque::class, mappedBy: 'Fabricant')]
+    #[ORM\OneToMany(targetEntity: Marque::class, mappedBy: 'fabricants')]
     private Collection $marques;
 
     public function __construct()
     {
         $this->marques = new ArrayCollection();
     }
+
 
     public function getId(): ?int
     {
@@ -58,7 +59,7 @@ class Fabricant
     {
         if (!$this->marques->contains($marque)) {
             $this->marques->add($marque);
-            $marque->setFabricant($this);
+            $marque->setFabricants($this);
         }
 
         return $this;
@@ -68,8 +69,8 @@ class Fabricant
     {
         if ($this->marques->removeElement($marque)) {
             // set the owning side to null (unless already changed)
-            if ($marque->getFabricant() === $this) {
-                $marque->setFabricant(null);
+            if ($marque->getFabricants() === $this) {
+                $marque->setFabricants(null);
             }
         }
 

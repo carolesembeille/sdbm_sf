@@ -1,0 +1,58 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Marque index
+{% endblock %}
+
+{% block body %}
+	<h1 class="text-center mt-3 mb-3">Liste des Marques</h1>
+
+	<a class="btn btn-danger bi bi-plus mt-3 mb-3" href="{{ path('app_marque_new') }}">Ajouter</a>
+
+	<table class="table table-dark table-striped">
+		<thead>
+			<tr>
+				<th>Id</th>
+				<th>NomMarque</th>
+				<th>NomFabricant</th>
+				<th>NomPays</th>
+				<th>actions</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for marque in marques %}
+				<tr>
+					<td>{{ marque.id }}</td>
+					<td>{{ marque.nomMarque }}</td>
+					{% if marque.fabricants  == NULL %}
+
+						<td>{% trans %}non connu{% endtrans %}</td>
+
+					{% else %}
+
+						<td>{{ marque.fabricants.nomFabricant }}</td>
+
+					{% endif %}
+					{% if marque.pays  == NULL %}
+
+						<td>{% trans %}non connu{% endtrans %}</td>
+
+					{% else %}
+
+						<td>{{ marque.pays.nomPays }}</td>
+
+					{% endif %}
+					<td>
+						<a class="btn btn-info bi bi-eye" href="{{ path('app_marque_show', {'id': marque.id}) }}">voir</a>
+						<a class="btn btn-secondary bi bi-pencil" href="{{ path('app_marque_edit', {'id': marque.id}) }}">modifier</a>
+					</td>
+				</tr>
+			{% else %}
+				<tr>
+					<td colspan="3">no records found</td>
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+
+
+{% endblock %}
