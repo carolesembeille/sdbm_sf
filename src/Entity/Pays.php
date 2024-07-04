@@ -25,13 +25,15 @@ class Pays
     /**
      * @var Collection<int, Marque>
      */
-    #[ORM\OneToMany(targetEntity: Marque::class, mappedBy: 'nomMarque')]
+    #[ORM\OneToMany(targetEntity: Marque::class, mappedBy: 'pays')]
     private Collection $marques;
 
     public function __construct()
     {
         $this->marques = new ArrayCollection();
     }
+
+
 
     public function getId(): ?int
     {
@@ -74,7 +76,7 @@ class Pays
     {
         if (!$this->marques->contains($marque)) {
             $this->marques->add($marque);
-            $marque->setNomMarque($this);
+            $marque->setPays($this);
         }
 
         return $this;
@@ -84,8 +86,8 @@ class Pays
     {
         if ($this->marques->removeElement($marque)) {
             // set the owning side to null (unless already changed)
-            if ($marque->getNomMarque() === $this) {
-                $marque->setNomMarque(null);
+            if ($marque->getPays() === $this) {
+                $marque->setPays(null);
             }
         }
 

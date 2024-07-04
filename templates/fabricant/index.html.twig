@@ -1,46 +1,50 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Fabricant index{% endblock %}
+{% block title %}Fabricant index
+{% endblock %}
 
 {% block body %}
 
-<style>
-    .example-wrapper {text-align:center;}
-</style>
+	<style>
+		.example-wrapper {
+			text-align: center;
+		}
+	</style>
 
-<div class="example-wrapper">
-   <h1 class="mt-3 mb-3" >Liste des fabricants </h1>
+	<div class="example-wrapper">
+		<h1 class="mt-3 mb-3">Liste des fabricants
+		</h1>
 
-    <a class="btn btn-success mt-3 mb-3 bi bi-plus" href="{{ path('app_fabricant_new') }}">Ajouter</a>
+		<a class="btn btn-success mt-3 mb-3 bi bi-plus" href="{{ path('app_fabricant_new') }}">Ajouter</a>
 
-  </div>
-    
+	</div>
 
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>NomFabricant</th>
-                <th>actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for fabricant in fabricants %}
-            <tr>
-                <td>{{ fabricant.id }}</td>
-                <td>{{ fabricant.nomFabricant }}</td>
-                <td>
-                    <a class="btn btn-info bi bi-eye" href="{{ path('app_fabricant_show', {'id': fabricant.id}) }}">voir</a>
-                    <a class="btn btn-secondary bi bi-pencil" href="{{ path('app_fabricant_edit', {'id': fabricant.id}) }}">modifier</a>
-                </td>
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan="3">no records found</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
 
-    
+	<table class="table table-dark table-striped">
+		<thead>
+			<tr>
+				<th>Id</th>
+				<th>NomFabricant</th>
+				<th>actions</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for fabricant in fabricants %}
+				<tr>
+					<td>{{ fabricant.id }}</td>
+					<td>{{ fabricant.nomFabricant }}</td>
+					<td>
+						<a class="btn btn-info bi bi-eye" href="{{ path('app_fabricant_show', {'id': fabricant.id}) }}">voir</a>
+						<a class="btn btn-secondary bi bi-pencil" href="{{ path('app_fabricant_edit', {'id': fabricant.id}) }}">modifier</a>
+					</td>
+				</tr>
+			{% else %}
+				<tr>
+					<td colspan="3">no records found</td>
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+
+
 {% endblock %}
