@@ -2,7 +2,7 @@ body{
     /* background-color: bisque !important; */
 
 
-background-image: url('{{ asset('images/biere.webp')}}') !important; 
+background-image: url('../images/biere.webp') !important; 
 }
 
 #mt-3 mb-3 {

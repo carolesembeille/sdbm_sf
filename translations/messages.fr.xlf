@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
-  <file source-language="fr" target-language="en" datatype="plaintext" original="file.ext">
+  <file source-language="fr" target-language="fr" datatype="plaintext" original="file.ext">
     <header>
       <tool tool-id="symfony" tool-name="Symfony"/>
     </header>
@@ -11,15 +11,15 @@
       </trans-unit>
       <trans-unit id="K820qi7" resname="langues">
         <source>langues</source>
-        <target>Languages</target>
+        <target>Langues</target>
       </trans-unit>
       <trans-unit id="TUj2_eF" resname="francais">
         <source>francais</source>
-        <target>french</target>
+        <target>francais</target>
       </trans-unit>
       <trans-unit id="ecJi3eY" resname="anglais">
         <source>anglais</source>
-        <target>english</target>
+        <target>anglais</target>
       </trans-unit>
       <trans-unit id="ydaMZLS" resname="Continent index">
         <source>Continent index</source>
@@ -27,11 +27,11 @@
       </trans-unit>
       <trans-unit id="apE2Qqc" resname="Liste des continents">
         <source>Liste des continents</source>
-        <target>List continents</target>
+        <target>Liste des continents</target>
       </trans-unit>
       <trans-unit id="msg1" resname="listcont">
         <source>listcont</source>
-        <target>List continentsxx</target>
+        <target>Liste des continentsxx</target>
       </trans-unit>
       <trans-unit id="hB3tBca" resname="non connu">
         <source>non connu</source>
