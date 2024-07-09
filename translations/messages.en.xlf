@@ -29,10 +29,7 @@
         <source>Liste des continents</source>
         <target>List continents</target>
       </trans-unit>
-      <trans-unit id="msg1" resname="listcont">
-        <source>listcont</source>
-        <target>List continentsxx</target>
-      </trans-unit>
+      
       <trans-unit id="hB3tBca" resname="non connu">
         <source>non connu</source>
         <target>__non connu</target>
