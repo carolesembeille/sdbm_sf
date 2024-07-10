@@ -7,7 +7,7 @@
     <body>
       <trans-unit id="KYPCWQE" resname="nomPays">
         <source>nomPays</source>
-        <target>__nomPays</target>
+        <target>countryName</target>
       </trans-unit>
       <trans-unit id="K820qi7" resname="langues">
         <source>langues</source>
@@ -29,10 +29,17 @@
         <source>Liste des continents</source>
         <target>List continents</target>
       </trans-unit>
-      
       <trans-unit id="hB3tBca" resname="non connu">
         <source>non connu</source>
         <target>__non connu</target>
+      </trans-unit>
+      <trans-unit id="UzFhc1Y" resname="Accueil">
+        <source>Accueil</source>
+        <target>Home</target>
+      </trans-unit>
+      <trans-unit id="VI1NYMl" resname="Bienvenue sur notre site">
+        <source>Bienvenue sur notre site</source>
+        <target>Welcome to our site</target>
       </trans-unit>
     </body>
   </file>

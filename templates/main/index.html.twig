@@ -1,32 +1,40 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}SDBM!{% endblock %}
+{% block title %}SDBM!
+{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { 
-    display:flex; 
-    align-items: center; 
-    justify-content: center;
-    margin: 1em auto; 
-    max-width: 800px; 
-    width: 95%; 
-    font: 18px/1.5 sans-serif; 
-    width: 100vw; 
-    height: 100vh;}
-   
-    .titre { font-size: 150px !important;text-align:center;}
-</style>
+	<style>
+		.example-wrapper {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin: 1em auto;
+			max-width: 800px;
+			width: 95%;
+			font: 18px / 1.5 sans-serif;
+			width: 100vw;
+			height: 100vh;
+		}
 
-<div class="example-wrapper">
-    {# <h1>Hello {{ controller_name }}! ✅</h1> #}
+		.titre {
+			font-size: 150px !important;
+			text-align: center;
+		}
+	</style>
 
-    <h1 class="titre"> Bienvenue sur notre site </h1>
+	<div
+		class="example-wrapper">
+		{# <h1>Hello {{ controller_name }}! ✅</h1> #}
 
-    {# This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code>C:/xampp/htdocs/sdbm_sf/SDBMSF/src/Controller/MainController.php</code></li>
-        <li>Your template at <code>C:/xampp/htdocs/sdbm_sf/SDBMSF/templates/main/index.html.twig</code></li>
-    </ul> #}
-</div>
+		<h1 class="titre">
+			{% trans %}Bienvenue sur notre site
+			{% endtrans %}</h1>
+
+		{# This friendly message is coming from:
+		    <ul>
+		        <li>Your controller at <code>C:/xampp/htdocs/sdbm_sf/SDBMSF/src/Controller/MainController.php</code></li>
+		        <li>Your template at <code>C:/xampp/htdocs/sdbm_sf/SDBMSF/templates/main/index.html.twig</code></li>
+		    </ul> #}
+	</div>
 {% endblock %}

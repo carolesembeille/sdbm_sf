@@ -27,6 +27,39 @@
 						height: 20px;
 					}
 				}
+
+				.bg-secondary {
+					--bs-bg-opacity: 1;
+					background-color: rgb(157, 187, 215) !important;
+				}
+
+				.navbar {
+					background-color: #6c757d; /* bg-secondary equivalent */
+				}
+
+				.navbar .nav-link {
+					color: yellow; /* Couleur du texte */
+				}
+
+				.navbar .nav-link:hover {
+					color: orange; /* Couleur du texte au survol */
+				}
+
+				.dropdown-menu .dropdown-item {
+					color: yellow; /* Couleur du texte des éléments du dropdown */
+				}
+
+				.dropdown-menu .dropdown-item:hover {
+					color: orange; /* Couleur du texte des éléments du dropdown au survol */
+				}
+
+				.navbar .navbar-brand {
+					color: yellow; /* Couleur du texte de la marque */
+				}
+
+				.navbar .navbar-brand:hover {
+					color: orange; /* Couleur du texte de la marque au survol */
+				}
 			</style>
 		{% endblock %}
 
@@ -39,11 +72,9 @@
 	<body>
 		<nav class="navbar navbar-expand-lg bg-secondary justify-content-center">
 			<div class="container-fluid">
-
-
 				<ul class="navbar-nav">
 					<li class="nav-item">
-						<a class="nav-link active" href="{{ path('app_main')}}">Accueil</a>
+						<a class="nav-link active" href="{{ path('app_main')}}">{% trans %}Accueil{% endtrans %}</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="{{ path('app_continent_index')}}">Continents</a>
@@ -63,8 +94,6 @@
 					<li class="nav-item">
 						<a class="nav-link" href="{{ path('app_typebiere_index')}}">Types de bières</a>
 					</li>
-
-
 					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-bs-toggle="dropdown">
 							{% trans %}langues{% endtrans %}
