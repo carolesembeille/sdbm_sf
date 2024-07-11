@@ -9,9 +9,9 @@ background-image: url('../images/biere.webp') !important;
     text-align: center;
 }
 
-.navbar-nav {
+/* .navbar-nav {
     background-color: rgb(66, 42, 155);
-}
+} */
 
 .bg-secondary {
     --bs-bg-opacity: 1;
