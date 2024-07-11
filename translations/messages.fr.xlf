@@ -29,6 +29,10 @@
         <source>Liste des continents</source>
         <target>Liste des continents</target>
       </trans-unit>
+       <trans-unit id="UzFhc1Y" resname="Accueil">
+        <source>Accueil</source>
+        <target>Accueil</target>
+      </trans-unit>
      
       <trans-unit id="hB3tBca" resname="non connu">
         <source>non connu</source>
