@@ -33,6 +33,10 @@
         <source>Accueil</source>
         <target>Accueil</target>
       </trans-unit>
+      <trans-unit id="VI1NYMl" resname="Bienvenue sur notre site">
+        <source>Bienvenue sur notre site</source>
+        <target>Bienvenue sur notre site</target>
+      </trans-unit>
      
       <trans-unit id="hB3tBca" resname="non connu">
         <source>non connu</source>
